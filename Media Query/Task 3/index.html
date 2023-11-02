@@ -1,0 +1,67 @@
+<!-- Task 3: problem statement
+Create a navigation bar with five links. Apply a media query that converts the navigation into a vertical list for screens smaller than 780px and also changes the background color to gray. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navigation</title>
+    <style>
+
+
+nav{
+    background-color: rgb(40, 40, 41);
+    padding:10px;
+}
+        ul{
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            
+          
+        }
+        ul li{
+            list-style: none;
+            padding: 10px;
+        }
+        ul li a{
+            text-decoration: none;
+            color:white;
+           
+        }
+        /* use hover to chenge color */
+        a:hover{
+background-color: rgb(172, 172, 198);
+        }
+        /* use media to create a responsive navigation bar */
+    @media (max-width:780px) {
+    nav{ background-color: gray;
+/* under 700px nav color will chenged  */
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        /* under 780px nav direction will vertically */
+    }
+
+    }
+     
+
+    </style>
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav>
+      <!-- ul tag -->
+      <ul>
+        <!-- list and inside list 5 a tag means link -->
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Services</a></li>
+         <li><a href="#">Portfolio</a></li>
+         <li><a href="#">Contact</a></li>
+      </ul>
+   </nav>
+    
+</body>
+</html>
